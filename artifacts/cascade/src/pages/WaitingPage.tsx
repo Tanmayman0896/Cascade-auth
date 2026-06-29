@@ -60,7 +60,7 @@ export default function WaitingPage() {
   );
 
   return (
-    <motion.div 
+    <motion.div
       className="min-h-[100dvh] w-full relative flex flex-col items-center justify-center bg-background overflow-hidden p-6"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ export default function WaitingPage() {
       data-testid="screen-waiting"
     >
       {/* Background Poster Faded */}
-      <div 
+      <div
         className="absolute inset-0 z-0 opacity-5 mix-blend-overlay bg-cover bg-center"
         style={{ backgroundImage: `url(${posterPath})` }}
       />
@@ -92,7 +92,7 @@ export default function WaitingPage() {
         </motion.div>
 
         {!isLive && (
-          <motion.div 
+          <motion.div
             className="flex flex-wrap items-center justify-center gap-3 md:gap-8 mb-16"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -108,7 +108,7 @@ export default function WaitingPage() {
           </motion.div>
         )}
 
-        <motion.div 
+        <motion.div
           className="border border-[#8B1A1A]/30 bg-[#8B1A1A]/5 p-6 backdrop-blur-sm relative w-full max-w-lg"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -119,21 +119,21 @@ export default function WaitingPage() {
           <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#8B1A1A]" />
           <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[#8B1A1A]" />
           <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#8B1A1A]" />
-          
+
           <p className="font-space-mono text-[#e8e0d0] text-sm md:text-base mb-2">
             Agent <span className="text-[#CC0000] uppercase font-bold">{user.name}</span>, your mission awaits.
           </p>
           <div className="w-full h-px bg-[#8B1A1A]/20 my-3" />
           <p className="font-special-elite text-xs md:text-sm text-foreground/80 tracking-widest leading-relaxed">
-            DATE: 4th July 2026<br/>
-            TIME: 12PM onwards<br/>
+            DATE: 4th July 2026<br />
+            TIME: 12PM onwards<br />
             VENUE: Online
           </p>
         </motion.div>
       </div>
 
-      <a 
-        href="/" 
+      <a
+        href="/"
         onClick={handleLogout}
         className="absolute bottom-6 right-6 font-space-mono text-[10px] text-foreground/50 hover:text-[#CC0000] transition-colors uppercase tracking-widest underline decoration-dotted underline-offset-4 cursor-pointer z-50"
       >
